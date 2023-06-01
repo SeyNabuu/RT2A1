@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to RT1_Assignment2’s documentation! &mdash; RT1_Assignment2_Documentation 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            RT1_Assignment2_Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to RT1_Assignment2’s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#module-script.first_node">First_node Module</a><ul>
+<li><a class="reference internal" href="#script.first_node.action_client"><code class="docutils literal notranslate"><span class="pre">action_client()</span></code></a></li>
+<li><a class="reference internal" href="#script.first_node.publ_data"><code class="docutils literal notranslate"><span class="pre">publ_data()</span></code></a></li>
+<li><a class="reference internal" href="#script.first_node.publ_srv"><code class="docutils literal notranslate"><span class="pre">publ_srv()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-script.second_node">Second_node Module</a></li>
+<li><a class="reference internal" href="#module-script.third_node">Third_node Module</a><ul>
+<li><a class="reference internal" href="#script.third_node.Callback"><code class="docutils literal notranslate"><span class="pre">Callback()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">RT1_Assignment2_Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Welcome to RT1_Assignment2’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="welcome-to-rt1-assignment2-s-documentation">
+<h1>Welcome to RT1_Assignment2’s documentation!<a class="headerlink" href="#welcome-to-rt1-assignment2-s-documentation" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+<section id="module-script.first_node">
+<span id="first-node-module"></span><h1>First_node Module<a class="headerlink" href="#module-script.first_node" title="Permalink to this heading"></a></h1>
+<span class="target" id="module-first_node"></span><dl class="simple">
+<dt>Description:</dt><dd><p>This node implements an action client to move the robot to a specified goal position. The main function initializes the ros node,set up the ros publisher and subscriber,and starts the action client.</p>
+</dd>
+<dt>Subscribes to:</dt><dd><ul class="simple">
+<li><p>/odom: Subscribes to the Odometry topic to get the current position and orientation of the robot.</p></li>
+</ul>
+</dd>
+<dt>Publishes to:</dt><dd><ul class="simple">
+<li><p>/posevelocity: Publishes the current position, velocity, and distance to the goal of the robot.</p></li>
+</ul>
+</dd>
+<dt>Services:</dt><dd><ul class="simple">
+<li><p>/goal_data: Receives a request for the number of goals reached and cancelled..</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="script.first_node.action_client">
+<span class="sig-prename descclassname"><span class="pre">script.first_node.</span></span><span class="sig-name descname"><span class="pre">action_client</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/script/first_node.html#action_client"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#script.first_node.action_client" title="Permalink to this definition"></a></dt>
+<dd><p>Function that implements the action client and handle goal setting and cancellation.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="script.first_node.publ_data">
+<span class="sig-prename descclassname"><span class="pre">script.first_node.</span></span><span class="sig-name descname"><span class="pre">publ_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/script/first_node.html#publ_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#script.first_node.publ_data" title="Permalink to this definition"></a></dt>
+<dd><p>Define a function that publish information about the position and the velocity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>msg</strong> – the robot’s position and velocity data(messages received from the topic “/odom”).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="script.first_node.publ_srv">
+<span class="sig-prename descclassname"><span class="pre">script.first_node.</span></span><span class="sig-name descname"><span class="pre">publ_srv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/script/first_node.html#publ_srv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#script.first_node.publ_srv" title="Permalink to this definition"></a></dt>
+<dd><p>Function to send the status of the operations every time a request is received.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>req</strong> – The request object.</p></li>
+<li><p><strong>Returns</strong> – A GoalResponse object with the status of the operations (reached and cancel)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-script.second_node">
+<span id="second-node-module"></span><h1>Second_node Module<a class="headerlink" href="#module-script.second_node" title="Permalink to this heading"></a></h1>
+<span class="target" id="module-Second_node"></span><dl class="simple">
+<dt>Description:</dt><dd><p>This module implements a service node that provides information about the number of goals reached and cancelled. When called, the node sends a request to the /goal_datà’ service and prints the received information.</p>
+</dd>
+<dt>Services:</dt><dd><p>-/goal_data: A service that provides the number of goals reached and cancelled.</p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#! /usr/bin/env python</span>
+
+<span class="c1">#Importe all necessary libraries and topics</span>
+<span class="kn">import</span> <span class="nn">rospy</span> 
+<span class="kn">from</span> <span class="nn">rt1_assignment.srv</span> <span class="kn">import</span> <span class="n">Goal</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+
+	<span class="c1">#initialized the node and service client </span>
+	<span class="c1"># then send a request to get the number of goals reached and cancelled</span>
+	<span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;node_B&#39;</span><span class="p">)</span>
+	<span class="n">rospy</span><span class="o">.</span><span class="n">wait_for_service</span><span class="p">(</span><span class="s2">&quot;goal_data&quot;</span><span class="p">)</span>
+	<span class="n">client</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="p">(</span><span class="s2">&quot;goal_data&quot;</span><span class="p">,</span> <span class="n">Goal</span><span class="p">)</span>
+	<span class="c1">#Retrieve data and print them</span>
+	<span class="n">info_status</span> <span class="o">=</span> <span class="n">client</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+	<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;the number of goals reached and cancelled are :</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">info_status</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="module-script.third_node">
+<span id="third-node-module"></span><h1>Third_node Module<a class="headerlink" href="#module-script.third_node" title="Permalink to this heading"></a></h1>
+<span class="target" id="module-third_node"></span><dl class="simple">
+<dt>Description:</dt><dd><p>This node subscribes to the robot’s position, velocity, and distance to the target from the ‘/posevelocity’ topic. It prints this information at a specified frequency.</p>
+</dd>
+<dt>Subscribes to:</dt><dd><ul class="simple">
+<li><p>/posevelocity: Subscribes to the custom message topic to get the robots position, velocity, and distance from the target.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="script.third_node.Callback">
+<span class="sig-prename descclassname"><span class="pre">script.third_node.</span></span><span class="sig-name descname"><span class="pre">Callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/script/third_node.html#Callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#script.third_node.Callback" title="Permalink to this definition"></a></dt>
+<dd><p>A callback function that subscribes to the posevelocity topic to get the robot’s position, velocity, and distance from target.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>msg</strong> – the robot’s position, velocity, and distance from target.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Diop Seynabou.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
